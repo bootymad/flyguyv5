@@ -1,26 +1,106 @@
+@font-face {
+	font-family: goodtimes;
+	src: url("/fonts/goodtimes.otf");
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
+/* LOGO */
+#logo {
+	font-family: goodtimes;
+	text-align: center;
+}
+
+/* HOME PAGE */
+.home-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	gap: 1rem;
+	max-width: 65rem;
+}
+
+/* SLIDE DOWN */
+.slide_down {
+	box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.slide_down-heading_bar {
+	text-align: center;
+}
+.slide_down-heading_bar:hover {
+	cursor: pointer;
+}
+
+.slide_down-content-box {
+	transition: max-height 500ms;
+	display: block;
+	overflow: hidden;
+	max-height: 0px;
+}
+
+.slide_down-content-box.is_open {
+	max-height: 5000px;
+}
+
+/* PRODUCT LIST */
+.product_list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+/* PRODUCT CARD */
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: center;
+	padding-block: 1rem;
+}
+.card img {
+	width: 20rem;
+	max-width: 100%;
+}
+
+.add_to_cart_button {
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 0.5rem;
+}
+
+.add_to_cart_button:hover,
+.add_to_cart_button:active {
+	cursor: pointer;
+	background: none;
+	color: black;
+}
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+	html {
+		color-scheme: dark;
+	}
+	body {
+		color: white;
+		background: black;
+	}
 }
