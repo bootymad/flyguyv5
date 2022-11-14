@@ -1,4 +1,4 @@
-const stripe = require("stripe");
+import stripe from "stripe";
 const stripeSession = stripe(process.env.STRIPE_KEY);
 
 const parseCartItems = (cart) => {

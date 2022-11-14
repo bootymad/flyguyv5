@@ -3,7 +3,7 @@ export default function Cart({ cart }) {
 	const cartKeys = Object.keys(cart);
 	console.log(cartKeys);
 	const clickHandler = async (cart) => {
-		const response = await fetch("http://localhost:3000/api/checkout", {
+		const response = await fetch("/api/checkout", {
 			method: "POST",
 			body: JSON.stringify(cart),
 			headers: {
